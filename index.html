@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat box AI</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="chatbot-toggler">
+        <span class="bx bx-message-rounded"></span>
+        <span class="bx bx-x"></span>
+    </button>
+    <div class="chatbot-popup">
+        <!-- chatbot header -->
+        <div class="chat-header">
+            <div class="header-info">
+                <i class='chatbot-logo bx bxl-redux'></i>
+                <h2 class="logo-text">Chatbot</h2>
+            </div>
+            <button id="close-chatbot" class='bx bx-chevron-down'></button>
+        </div>
+        <!-- chatbot body -->
+        <div class="chat-body">
+            <div class="message bot-message">
+                <i class='bot-avatar bx bxl-redux'></i>
+                <div class="message-text">
+                    Hey there 🖐️<br> How can I help you today?
+                </div>
+            </div>
+        </div>
+        <!-- chatbot footer -->
+        <div class="chat-footer">
+            <form action="#" class="chat-form">
+                <textarea placeholder="Message..." class="message-input" required></textarea>
+                <div class="chat-controls">
+                    <button type="button" id="emoji-picker" class='bx bx-smile'></button>
+                    <div class="file-upload-wrapper">
+                        <input type="file" id="file-input" accept="images/*"
+                            hidden />
+                        <img src="#" alt="">
+                        <button type="button" id="file-upload" class='bx bx-link'></button>
+                        <button type="button" id="file-cancel" class='bx bx-x'></button>
+                    </div>
+                    <button type="submit" id="send-message" class='bx bx-send'></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
